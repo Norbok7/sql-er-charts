@@ -1,0 +1,4 @@
+-- Updating the email address of the customer with CustomerID 2
+UPDATE Customers
+SET Email = 'bob.smith@newdomain.com'
+WHERE CustomerID = 2;

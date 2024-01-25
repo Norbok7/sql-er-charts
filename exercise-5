@@ -1,0 +1,29 @@
+-- Creating the Students table
+CREATE TABLE Students (
+    StudentID INT PRIMARY KEY,
+    Name TEXT
+);
+
+-- Creating the Grades table
+CREATE TABLE Grades (
+    StudentID INT,
+    Subject TEXT,
+    Grade INT,
+    PRIMARY KEY (StudentID, Subject), -- Assuming a student can have multiple grades for the same subject
+    FOREIGN KEY (StudentID) REFERENCES Students(StudentID)
+);
+
+-- Sample data insertion into the Students table
+INSERT INTO Students (StudentID, Name) VALUES
+(1, 'Alice Johnson'),
+(2, 'Bob Smith'),
+(3, 'Charlie Brown');
+
+-- Sample data insertion into the Grades table
+INSERT INTO Grades (StudentID, Subject, Grade) VALUES
+(1, 'Math', 90),
+(1, 'Science', 85),
+(2, 'Math', 78),
+(2, 'Science', 92),
+(3, 'Math', 88),
+(3, 'Science', 95);
