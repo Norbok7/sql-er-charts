@@ -1,0 +1,10 @@
+One to One Relationships
+Using the above tools, create ER diagrams for the following exercises.
+
+Exercise 1: Apartment Complex
+
+Entities:
+
+Apartment: id (Primary Key), room_number, active (Boolean), renter_id (Foreign Key)
+Renter: id (Primary Key), first_name, last_name, email, license_number, apartment_id (Foreign Key)
+Task: Create an ER diagram showing each apartment linked to one unique renter and vice versa.
